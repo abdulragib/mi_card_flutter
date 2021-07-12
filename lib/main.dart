@@ -11,65 +11,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: SafeArea(
-          child: Row(
-            children: [
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text("9:27"),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 650,
-                      width: 100,
-                      color: Colors.red,
-                      child: Text("Container 1"),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.yellow,
-                      child: Text("Container 1"),
-                    ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.yellow.shade200,
-                      child: Text("Container 1"),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 50,
-              ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      height: 650,
-                      width: 100,
-                      color: Colors.blue,
-                      child: Text("Container 1"),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+        body: Center(
+          child: Container(
+            child: CircleAvatar(
+              radius: 50.0,
+             backgroundImage: NetworkImage('https://instagram.fpat2-2.fna.fbcdn.net/v/t51.2885-19/s320x320/202275436_784096098917607_8868512262180276103_n.jpg?_nc_ht=instagram.fpat2-2.fna.fbcdn.net&_nc_ohc=ZNehbYD3IrsAX95KZOC&edm=ABfd0MgBAAAA&ccb=7-4&oh=cc779b26404c292dd0e1445d3b4d9c6f&oe=60F27814&_nc_sid=7bff83'),
+            ),
           ),
         ),
       ),
