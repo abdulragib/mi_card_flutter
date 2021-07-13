@@ -10,9 +10,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: Container(
+          padding: EdgeInsets.only(left: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            
           children: <Widget>[
+            
            CircleAvatar(
             radius: 50.0,
            backgroundImage: AssetImage('images/pic1.png'),
@@ -45,37 +49,45 @@ class MyApp extends StatelessWidget {
            ),
 
            Padding(padding: EdgeInsets.all(5)),
-           Card(
-             margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-            child: ListTile(
-              leading: Icon(Icons.call,
-                 color: Colors.teal),
-                 title: Text("+91 7033037325",
-                 style: TextStyle(
-                   color: Colors.teal.shade900,
-                   fontSize: 18,
-                   fontFamily: 'Source Sans Pro'
-                 ),
-                ),
-            )
+           Container(
+             width: 360,
+             height: 80,
+             child: Card(
+               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(Icons.call,
+                   color: Colors.teal),
+                   title: Text("+91 7033037325",
+                   style: TextStyle(
+                     color: Colors.teal.shade900,
+                     fontSize: 18,
+                     fontFamily: 'Source Sans Pro'
+                   ),
+                  ),
+              )
+             ),
            ),
            
            
-            Card(
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: ListTile(
-                leading: Icon(Icons.email,
-                color: Colors.teal),
+            Container(
+              width: 360,
+              height: 80,
+               child: Card(
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(Icons.email,
+                    color: Colors.teal),
 
-                title: Text("abdulragib36@gmail.com",
-                   style: TextStyle(
-                      color: Colors.teal.shade900,
-                     fontSize: 18,
-                    fontFamily: 'Source Sans Pro'
-                    ),
+                    title: Text("abdulragib36@gmail.com",
+                       style: TextStyle(
+                          color: Colors.teal.shade900,
+                         fontSize: 18,
+                        fontFamily: 'Source Sans Pro'
+                        ),
+                      ),
+                    
                   ),
-                
-              ),
+                ),
             ),
           ],
          ),
