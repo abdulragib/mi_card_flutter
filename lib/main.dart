@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -7,16 +6,88 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: Center(
           child: Container(
-            child: CircleAvatar(
+            padding: EdgeInsets.only(top: 200),
+            child: Column(
+            children: <Widget>[
+             CircleAvatar(
               radius: 50.0,
-             backgroundImage: NetworkImage('https://instagram.fpat2-2.fna.fbcdn.net/v/t51.2885-19/s320x320/202275436_784096098917607_8868512262180276103_n.jpg?_nc_ht=instagram.fpat2-2.fna.fbcdn.net&_nc_ohc=ZNehbYD3IrsAX95KZOC&edm=ABfd0MgBAAAA&ccb=7-4&oh=cc779b26404c292dd0e1445d3b4d9c6f&oe=60F27814&_nc_sid=7bff83'),
+             backgroundImage: AssetImage('images/pic1.png'),
             ),
+
+            Text(
+            'Abdul Ragib',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Pacifico',
+              ),
+             ),
+
+             Text(
+            'Flutter Developer',
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.teal[100],
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Source Sans Pro',
+              ),
+             ),
+             
+             Padding(padding: EdgeInsets.all(5)),
+             Card(
+              child: Container(
+                 padding: EdgeInsets.all(6),
+                 color: Colors.white,
+                 width: 300,
+                 height:35,
+                child: Row(
+                   children: <Widget>[
+                     Icon(Icons.call,
+                     color: Colors.teal),
+                     SizedBox(width:10),
+                     Text("+91 7033037325",
+                     style: TextStyle(
+                       color: Colors.teal.shade900,
+                       fontSize: 16,
+                       fontFamily: 'Source Sans Pro'
+                     ),
+                    ),
+                   ],
+                 ),
+               ),
+             ),
+             
+             SizedBox(height: 8),
+              Card(
+                child: Container(
+                  padding: EdgeInsets.all(6),
+                 color: Colors.white,
+                 width: 300,
+                 height:35,
+                child: Row(
+                   children: <Widget>[
+                     Icon(Icons.email,
+                     color: Colors.teal),
+                     SizedBox(width:10),
+                     Text("abdulragib36@gmail.com",
+                     style: TextStyle(
+                       color: Colors.teal.shade900,
+                       fontSize: 16,
+                       fontFamily: 'Source Sans Pro'
+                     ),
+                    ),
+                   ],
+                 ),
+             ),
+              ),
+            ],
+           ),
           ),
         ),
       ),
